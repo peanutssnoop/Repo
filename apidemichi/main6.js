@@ -1,29 +1,11 @@
-const URL = 'https://rickandmortyapi.com/api/character/2';
+const URL = 'https://cataas.com/cat';
 
+function myCat() {
+    const img = document.querySelector('.image');
 
-async function myCat () {
-    fetch(URL)
-.then(res => res.json())
-.then(data =>{
-   console.log(data[0]);
-    const img = document.querySelector('img');
-    img.src = data.image;
-    
-});
-   /* const res = await fetch(URL);
-    const data = await res.json();
-    const img = document.querySelector('img');
-    img.src = data[0].url;
-    */
+    img.src = `${URL}?random=${Math.random()}`;
 }
 
-const myButton = document.querySelector("button");
-myButton.onclick = myCat; 
+const myButton = document.querySelector('.random-cat-button');
 
-
- 
-
-//https://api.thecatapi.com/v1/images/search
- 
-
-
+myButton.onclick = myCat;
