@@ -1,0 +1,66 @@
+html{
+    border:10px solid #BAD7E9;
+}
+
+
+body{
+    background-color: #2B3467;
+    margin: 0%;
+    border:10px solid #64000f;
+    margin: 2% 2%;
+}
+
+h1{
+    font-family: 'Tilt Prism', cursive;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 50px;
+    color: #FCFFE7;
+    
+}
+
+h2{
+    font-family: 'Tilt Prism', cursive;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-style: italic;
+    color: #FCFFE7;
+}
+
+header{
+   background-image: url(istockphoto-1312782412-612x612.jpg);
+   background-size: cover;
+   padding: 50px;
+ 
+}
+
+#fotos{
+    display: flex;
+
+
+}
+
+#bot{
+    background-image: url(./fuego.jpeg);
+   background-size: auto;
+   padding: 50px ;
+   opacity: 0.6;
+  
+}
+
+#contenido{
+font-style: italic;
+text-align: center;
+font-size: 20px;
+color: #FCFFE7;
+}
+
+/*
+#2B3467  azul
+#BAD7E9 claro
+#FCFFE7 claro
+#EB455F  rojo 
+
+*/ 

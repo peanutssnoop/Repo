@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./index3.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Estefania López</h2>
+      <ul class="navigation-items">
+        
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm Estefanía, I am student of Physics and Full stack developer. 
+            </p>
+            <p>
+              I am currently in Mexico finishing my engineering in physics.
+            <p>
+              In my free time I like to read about sciense and technology.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="https://blog.ida.cl/wp-content/uploads/sites/5/2014/09/developer-cat-655x470.jpg"
+            alt="A photo of me if I were a cat"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Ada Lovelace's Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>The first computer program</h3>
+          </summary>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Diagram_for_the_computation_of_Bernoulli_numbers.jpg/220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg"
+            alt="Lovelace's diagram from note G, the first published computer
+          algorithm"
+            class="project-image"
+          />
+          <p class="project-description">
+            The world's first computer program for computing Bernoulli numbers.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>The Analytical Engine</h3>
+          </summary>
+          <img
+            src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb"
+            alt="An original model of part of the Analytical Engine"
+            class="project-image"
+          />
+          <p class="project-description">
+            I helped Charles Babbage on topics ranging from math to computation
+            that helped the development of the Analytical Engine.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>The Ada programming language</h3>
+          </summary>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Ada_Mascot_with_slogan.svg/220px-Ada_Mascot_with_slogan.svg.png"
+            alt='Ada mascot, a black and cobalt blue hummingbird, flying above the
+          slogan "Time-tested, safe and secure"'
+            class="project-image"
+          />
+          <p class="project-description">
+            My work inspired the United States Department of Defense to name
+            their new programming language after me.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>My Skills</h2>
+      HTMl, Javascript, CSS, C++.
+      
+      </section>
+    </main>
+
+    <footer>Made with <span class="heart">♥</span> in México</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "07-21-2022";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>

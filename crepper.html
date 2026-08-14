@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background-color: #ceecf5
+        }
+        </style>
+</head>
+<body>
+
+    <center>
+        <h1>Click en cualquier parte de la pantalla :3</h1>
+    </center>
+    <canvas width="1920" height="1080"></canvas>
+
+    <script>
+        var pantalla=document.querySelector('canvas');
+        var pincel=pantalla.getContext('2d');
+
+        //documentacion buscar canvas 2d para conocer mas
+ 
+  
+        function cripper(x,  y){
+        
+        pincel.fillStyle='darkgreen'; //propiedad
+            
+        pincel.fillRect(x, y, 350, 300); //funcion  origen, x, y 
+
+        pincel.fillStyle='black'; //propiedad
+        pincel.fillRect(x+100, y+190, 40, 110); //funcion mueca 1
+
+        
+        pincel.fillRect(x+210, y+190, 40, 110); //funcion mueca 2
+
+    
+        pincel.fillRect(x+140, y+145, 70, 100); //funcion nariz
+
+        
+        pincel.fillRect(x+50, y+55, 90, 90); //funcion ojo 1
+
+        
+        pincel.fillRect(x+210, y+55, 90, 90); //funcion  ojo 2
+
+        console.log('gato');
+        };
+   
+
+        function azar(){
+            let n=Math.round(Math.random()*1800);
+        let m=Math.round(Math.random()*1000); 
+            return cripper(n,m);
+        }
+
+    pantalla.onclick=azar;
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+    background-color: cadetblue;
+}
+
+#imagen1{
+    width: 25%;
+    height: 25%;
+
+}
+
+#frase{
+    display: flex;
+    align-items: center; /* Para alinear las palabras y la imagen*/
+    justify-content: center;  /* Para alinear todos los bloques al centro de la pantalla*/
+}
+
